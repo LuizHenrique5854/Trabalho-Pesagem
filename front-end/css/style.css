@@ -1,6 +1,3 @@
-/* =========================================
-   VARIÁVEIS E RESET BÁSICO
-   ========================================= */
 :root {
     --bg-body: #F5F7FA;
     --bg-card: #FFFFFF;
@@ -25,12 +22,9 @@ body {
     background-color: var(--bg-body);
     color: var(--text-dark);
     line-height: 1.5;
-    padding-bottom: 70px; /* Espaço para o menu mobile */
+    padding-bottom: 70px;
 }
 
-/* =========================================
-   CABEÇALHO (HEADER)
-   ========================================= */
 header {
     background-color: var(--bg-card);
     padding: 16px 24px;
@@ -110,9 +104,6 @@ header {
     font-size: 0.9rem;
 }
 
-/* =========================================
-   LAYOUT PRINCIPAL (SIDEBAR + MAIN)
-   ========================================= */
 .layout {
     display: flex;
     max-width: 1280px;
@@ -120,7 +111,6 @@ header {
     min-height: calc(100vh - 73px);
 }
 
-/* Menu Lateral (Desktop) */
 .layout > aside {
     width: 240px;
     background-color: var(--bg-card);
@@ -171,7 +161,6 @@ header {
     color: inherit;
 }
 
-/* Conteúdo Principal */
 main {
     flex: 1;
     padding: 24px;
@@ -180,7 +169,6 @@ main {
     gap: 24px;
 }
 
-/* Saudação ("Olá") */
 main > section:first-child h2 {
     font-size: 1.6rem;
     font-weight: 700;
@@ -198,9 +186,6 @@ main > div {
     gap: 24px;
 }
 
-/* =========================================
-   CARDS DE INDICADORES (GRID 2x2 ou 4x1)
-   ========================================= */
 main > div > section:first-child {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -223,7 +208,6 @@ main > div > section:first-child {
     transform: translateY(-2px);
 }
 
-/* Esconde o 4º card caso ele esteja vazio */
 .card:empty {
     display: none;
 }
@@ -266,9 +250,6 @@ main > div > section:first-child {
     margin-top: 2px;
 }
 
-/* =========================================
-   SEÇÃO DO GRÁFICO E HISTÓRICO (CARTÕES GRANDES)
-   ========================================= */
 main > div > section:nth-child(2),
 .Historico {
     background-color: var(--bg-card);
@@ -309,9 +290,7 @@ main > div > section:nth-child(2) > p,
     height: 100% !important;
 }
 
-/* =========================================
-   TABELA DE HISTÓRICO
-   ========================================= */
+
 .Historico > div {
     overflow-x: auto;
 }
@@ -353,15 +332,11 @@ tbody td:nth-child(3) {
     font-weight: 600;
 }
 
-/* =========================================
-   RESPONSIVIDADE (ESTILO MOBILE DA IMAGEM)
-   ========================================= */
 @media (max-width: 768px) {
     .layout {
         flex-direction: column;
     }
 
-    /* Transforma a sidebar em barra fixa inferior igual ao app */
     .layout > aside {
         position: fixed;
         bottom: 0;
@@ -388,7 +363,6 @@ tbody td:nth-child(3) {
         text-align: center;
     }
 
-    /* Grid de 2 colunas no celular igual ao print */
     main > div > section:first-child {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
@@ -403,6 +377,6 @@ tbody td:nth-child(3) {
     }
 
     .logo span p {
-        display: none; /* Economiza espaço no topo mobile */
+        display: none;
     }
 }
